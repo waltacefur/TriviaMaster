@@ -9,9 +9,10 @@ function trivmaster(){
     roomName: 'TrivMaster',
     width: window.screen.availWidth/2-50,
     height: window.screen.availWidth/2-50,
+    configOverwrite: { startWithAudioMuted: true },
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIT = new JitsiMeetExternalAPI(domain, options)}
 function lobby(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -20,7 +21,7 @@ function lobby(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIL = new JitsiMeetExternalAPI(domain, options)}
 function redteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -29,7 +30,7 @@ function redteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIR = new JitsiMeetExternalAPI(domain, options)}
 function orangeteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -38,7 +39,7 @@ function orangeteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIO = new JitsiMeetExternalAPI(domain, options)}
 function yellowteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -47,7 +48,7 @@ function yellowteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIY = new JitsiMeetExternalAPI(domain, options)}
 function greenteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -56,7 +57,7 @@ function greenteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIG = new JitsiMeetExternalAPI(domain, options)}
 function blueteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -65,7 +66,7 @@ function blueteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIB = new JitsiMeetExternalAPI(domain, options)}
 function indigoteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -74,7 +75,7 @@ function indigoteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APII = new JitsiMeetExternalAPI(domain, options)}
 function violetteam(){
 	const domain = 'meet.jit.si';
 	const options = {
@@ -83,7 +84,52 @@ function violetteam(){
     height: window.screen.availWidth/2-50,
 //    parentNode: document.querySelector('#meet')
 };
-	API = new JitsiMeetExternalAPI(domain, options)}
+	APIV = new JitsiMeetExternalAPI(domain, options)}
+function teardownT(){
+	if(APIT){
+		APIT.dispose()
+	}
+}
+function teardownL(){
+	if(APIL){
+		APIL.dispose()
+	}
+}
+function teardownR(){
+	if(APIR){
+		APIR.dispose()
+	}
+}
+function teardownO(){
+	if(APIO){
+		APIO.dispose()
+	}
+}
+function teardownY(){
+	if(APIY){
+		APIY.dispose()
+	}
+}
+function teardownG(){
+	if(APIG){
+		APIG.dispose()
+	}
+}
+function teardownB(){
+	if(APIB){
+		APIB.dispose()
+	}
+}
+function teardownI(){
+	if(APII){
+		APII.dispose()
+	}
+}
+function teardownV(){
+	if(APIV){
+		APIV.dispose()
+	}
+}
 	</script>
 <meta charset="UTF-8" />
 <title>TriviaMaster</title>
@@ -191,8 +237,17 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 body {
 	margin-left: 3.5em;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Trivia Master" tags="" position="500,0" size="100,100">TRIVIA MASTER
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 trivmaster()
 &lt;/script&gt;
 
@@ -203,8 +258,17 @@ trivmaster()
 [[Blue]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="2" name="Red" tags="" position="300,200" size="100,100">RED
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 redteam()
 &lt;/script&gt;
 
@@ -215,8 +279,17 @@ redteam()
 [[Blue]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="3" name="Orange" tags="" position="100,400" size="100,100">ORANGE
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 orangeteam()
 &lt;/script&gt;
 
@@ -227,8 +300,17 @@ orangeteam()
 [[Blue]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="4" name="Yellow" tags="" position="300,600" size="100,100">YELLOW
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 yellowteam()
 &lt;/script&gt;
 
@@ -239,8 +321,17 @@ yellowteam()
 [[Blue]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="5" name="Green" tags="" position="500,800" size="100,100">GREEN
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 greenteam()
 &lt;/script&gt;
 
@@ -251,8 +342,17 @@ greenteam()
 [[Blue]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="6" name="Blue" tags="" position="700,600" size="100,100">BLUE
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 blueteam()
 &lt;/script&gt;
 
@@ -263,8 +363,17 @@ blueteam()
 [[Green]]
 [[Indigo]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="7" name="Indigo" tags="" position="900,400" size="100,100">INDIGO
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 orangeteam()
 &lt;/script&gt;
 
@@ -275,8 +384,17 @@ orangeteam()
 [[Green]]
 [[Blue]]
 [[Violet]]</tw-passagedata><tw-passagedata pid="8" name="Violet" tags="" position="700,200" size="100,100">VIOLET
-&lt;&lt;refresh&gt;&gt;
+
 &lt;script&gt;
+teardownL()
+teardownT()
+teardownR()
+teardownO()
+teardownY()
+teardownG()
+teardownB()
+teardownI()
+teardownV()
 violetteam()
 &lt;/script&gt;
 
